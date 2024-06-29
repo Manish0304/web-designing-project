@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <input type="text" id="n1" placeholder="English">
+    <input type="text" id="n2" placeholder="Hindi">
+    <input type="text" id="n3" placeholder="maths">
+    <input type="text" id="n4" placeholder="Physics">
+    <input type="text" id="n5" placeholder="chemistry">
+    <button ondblclick="my()">Result</button>
+    <h1 id="m1"></h1>
+    <h1 id="m2"></h1>
+    <h1 id="m3"></h1>
+    <h1 id="m4"></h1>
+    <h1 id="m5"></h1>
+
+    <script>
+        function my (){
+            var a = document.getElementById("n1").value;
+            var b = document.getElementById("n2").value; 
+            var c = document.getElementById("n3").value;
+            var d = document.getElementById("n4").value;
+            var e = document.getElementById("n5").value;
+             var t = parseInt(a)+parseInt(b)+parseInt(c)+parseInt(d)+parseInt(e);
+             var p = t/500*100;
+            document.getElementById("m1").innerHTML = "Totel ="+(parseInt(t));
+            document.getElementById("m2").innerHTML =  "Percentage ="+(parseInt(p));
+            if(p >= 90){
+                document.getElementById("m3").innerHTML =  "gared = A+";
+            }
+            if(p >= 60 && p < 89){
+                document.getElementById("m3").innerHTML =  "gared = A";
+            }
+            if(p >= 45 && p < 59){
+                document.getElementById("m3").innerHTML =  "gared = B";
+            }
+            if(p >= 33 && p < 44){
+                document.getElementById("m3").innerHTML =  "gared = C";
+            }
+            if(p >= 1 && p < 32){
+                document.getElementById("m4").innerHTML =  "Result = FaLL";
+            }
+            if(p > 33  && p < 100){
+                document.getElementById("m4").innerHTML =  "Result = Pass";
+            }
+        }
+    </script> -->
+
+    <input type="text" placeholder="hindi" id="d1">
+    <input type="text" placeholder="english" id="d2">
+    <input type="text" placeholder="maths" id="d3">
+    <input type="text" placeholder="phy." id="d4">
+    <input type="text" placeholder="che." id="d5">
+    <button ondblclick="my()">Result</button>
+    <h1 id="a"></h1>
+    <h1 id="b"></h1>
+    <h1 id="c"></h1>
+    <h1 id="d"></h1>
+    
+
+    <script>
+        function my (){
+            var h = document.getElementById("d1").value;
+            var e = document.getElementById("d2").value;
+            var m = document.getElementById("d3").value;
+            var p = document.getElementById("d4").value;
+            var c = document.getElementById("d5").value;
+
+            var t = parseInt(h)+parseInt(e)+parseInt(m)+parseInt(p)+parseInt(c);
+            var pr = t/500*100;
+            document.getElementById("a").innerHTML = "totel = "+(parseInt(t));
+            document.getElementById("b").innerHTML = "pr%   = %"+(parseInt(pr));
+            if(pr >= 90 && pr < 101){
+                document.getElementById("c").innerHTML = "grad = A+"
+            }
+            if(pr >= 80 && pr < 89){
+                document.getElementById("c").innerHTML = "grad = A"
+            }
+            if(pr >= 70 && pr < 79){
+                document.getElementById("c").innerHTML = "grad = B"
+            }
+            if(pr >= 50 && pr < 69){
+                document.getElementById("c").innerHTML = "grad = C"
+            }
+            if(pr >= 33 && pr < 49){
+                document.getElementById("c").innerHTML = "grad = D"
+            }
+            if(pr >= 1 && pr < 32){
+                document.getElementById("c").innerHTML = "grad = F"
+            }
+            if(pr >= 33 && pr < 100){
+                document.getElementById("d").innerHTML = "result = pass"
+                
+            }
+            if(pr >= 1 && pr < 32){
+                document.getElementById("d").innerHTML = "result = Fall"
+
+            }
+
+        }
+    </script>
+    
+    
+    
+    
+</body>
+</html>

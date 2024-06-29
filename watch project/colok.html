@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clock</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            color:#fff;
+        }
+        body{
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .contener{
+            position: relative;
+            bottom: 150px;
+            right: 150px;
+        }
+        .clock{
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5rwrOMKZnUtQzfdSeJeI9GbfZBwowoVkJIL43Gj_158LgFKIkHgTFTr06Gio1ULZQaro&usqp=CAU);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            z-index: 2;
+            background-color: rgb(35, 6, 254);
+            border: 5px solid rgba(112, 91, 91, 0.89);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .clock samp{
+            position: absolute;
+            transform: rotate(calc(30deg * var(--i)));
+            inset: 12px;
+            text-align: center;
+        }
+        .clock samp b{
+            transform: rotate(calc(-30deg * var(--i)));
+            display: inline-block;
+            font-size: 20px;
+
+        }
+        .clock::before{
+            content: '';
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #fff;
+            z-index: 2;
+        }
+        .hand{
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+       .hand i{
+            position: absolute;
+            background-color: var(--clr);
+            width: 4px;
+            height: var(--i);
+            border-radius: 8px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="contener">
+        <div class="clock">
+            <div style="--clr:#ff3d58 ; --i:50px" id="hour" class="hand"><i></i></div>
+            <div style="--clr:#3dd5ff ;  --i:80px" id="min" class="hand"><i></i></div>
+            <div style="--clr:#120c0c ; --i:82px" id="sec" class="hand"><i></i></div>
+            <samp style="--i:1;"><b></b></samp>
+            <samp style="--i:2;"><b></b></samp>
+            <samp style="--i:3;"><b></b></samp>
+            <samp style="--i:4;"><b></b></samp>
+            <samp style="--i:5;"><b></b></samp>
+            <samp style="--i:6;"><b></b></samp>
+            <samp style="--i:7;"><b></b></samp>
+            <samp style="--i:8;"><b></b></samp>
+            <samp style="--i:9;"><b></b></samp>
+            <samp style="--i:10;"><b></b></samp>
+            <samp style="--i:11;"><b></b></samp>
+            <samp style="--i:12;"><b></b></samp>
+            <script>
+                let hr = document.getElementById("hour");
+                let min = document.getElementById("min");
+                let sec = document.getElementById("sec");
+                function displaytime(){
+                     let date = new Date();
+
+                     let hh = date.getHours();
+                     let mm = date.getMinutes();
+                     let ss = date.getSeconds();
+
+                     let hRotation = 30*hh + mm/2;
+                     let mRotation = 6*mm;
+                     let sRotation = 6*ss;
+
+                     hr.style.transform = `rotate(${hRotation}deg)`;
+                     min.style.transform = `rotate(${mRotation}deg)`;
+                     sec.style.transform = `rotate(${sRotation}deg)`;
+                     
+                     
+                     
+                     
+
+                }
+                setInterval(displaytime, 1000);
+            </script>
+        </div>
+    </div>
+</body>
+</html>
