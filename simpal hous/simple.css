@@ -1,0 +1,116 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: century;
+}
+
+header{
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXz_Js2VJUtKgYLU_-QhN8Q6GnV6TFBL2xcg&s);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    min-height: 100px;
+    
+
+}
+
+ul{
+    float: right;
+    list-style-type: none;
+    margin-top: 30px;
+    min-height: 400px;
+    margin-right: 60px;
+    font-size: 16px;
+}
+ul li{
+    display: inline-block;
+}
+ul li a{
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 20px;
+    border: 1px solid transparent;
+    transition: 0.5 ease;
+}
+
+ul li a:hover{
+    background-color: #fff;
+    color: #000;
+}
+ul li.active a{
+    background-color: #fff;
+    color: #000;
+}
+ul li.active a img{
+    height: 14px;
+}
+
+.logo img{
+    float: left;
+    width: 150px;
+    height: ;
+    mix-blend-mode: color-burn;
+}
+.box{
+    max-width: 1200px;
+    margin: auto;
+}
+.title{
+    position: absolute;
+    top: 46%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.title h1{
+    color:#fff;
+    font-size: 70px;
+}
+.butten{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.btn{
+    border: 1px solid #fff;
+    padding: 5px 20px;
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+}
+.btn:hover{
+    background-color: #fff;
+    color: #000;
+}
+.submenu{
+    display: none;
+    position: relative;
+    top: 6%;
+}
+.submenu ul{
+    position: absolute;
+}
+.box ul li:hover .submenu{
+    display: block;
+    position: absolute;
+    background-color: blue;
+    margin-top: 12px;
+    margin-left: -8px;
+}
+.box ul li:hover .submenu ul{
+    display: block;
+    margin: 6px;
+}
+.box ul li:hover .submenu ul li{
+    width: 75px;
+    padding: 5px;
+    border-bottom: 1px #fff;
+    text-align: left;
+    border-radius: 0px;
+}
+ul li a img{
+    height: 14px;
+}
+
+

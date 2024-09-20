@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <input type="text" id="data">
+        <button onclick="my()">check</button>
+        <h2 id="a1"></h2>
+        <h2 id="a2"></h2>
+        <h2 id="a3"></h2>
+        <h2 id="a4"></h2>
+        <h2 id="a5"></h2>
+        <h2 id="a6"></h2>
+        <script>
+            function my () {
+                let x = document.getElementById("data").value;
+            document.getElementById("a1").innerHTML = "Unit ="+parseInt(x);
+            let y = x-100;
+            var f = 100;
+            let a = y * 8;
+            let d = a * 18/100;
+            let t = a+d;
+            
+            
+            document.getElementById("a2").innerHTML = "free Unit ="+parseInt(f);
+           if (x > 100){
+                 document.getElementById("a3").innerHTML =  "Remaining Unit ="+parseInt(y);
+                }
+           if (x > 100){
+            document.getElementById("a4").innerHTML =  "8₹ par unit Bill ="+parseInt(a);
+            }
+           if (x > 100){
+             document.getElementById("a5").innerHTML =  "18% Gst ="+parseInt(d);
+            }
+            if (x <= 100){
+                document.getElementById("a6").innerHTML = "free";
+            }
+            if (x > 100){
+                document.getElementById("a6").innerHTML =  "total Bill ="+parseInt(t);
+            }
+           </script>
+    
+</body>
+</html>
